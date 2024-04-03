@@ -8,160 +8,231 @@ namespace UnitTestingHomework
         public class AddTests
         {
             [Fact]
-            public void TestPositiveIntegers()
+            public void TestAddingPositiveIntegers()
             {
-                Assert.Equal(5, Calculator.Add(2, 3));
+                var expected = 5;
+                var actual = Calculator.Add(2, 3);
+
+                Assert.Equal(expected,actual);
             }
 
             [Fact]
-            public void TestNegativeIntegers()
+            public void TestAddingNegativeIntegers()
             {
-                Assert.Equal(-1, Calculator.Add(-2, 1));
+                var actual = -1;
+                var expected = Calculator.Add(-2, 1);
+
+                Assert.Equal(actual,expected);
             }
 
             [Fact]
-            public void TestZero()
+            public void TestAddingZeroToPositiveInteger()
             {
-                Assert.Equal(5, Calculator.Add(5, 0));
+                var actual = 5;
+                var expected = Calculator.Add(5, 0);
+
+                Assert.Equal(actual,expected);
             }
 
             [Fact]
-            public void TestFloatingPointNumbers()
+            public void TestAddingFloatingPointNumbers()
             {
-                Assert.Equal(4.5, Calculator.Add(2.5, 2));
+                var actual = 4.5;
+                var expected = Calculator.Add(2.5, 2);
+
+                Assert.Equal(actual,expected);
             }
 
             [Fact]
             public void TestCommutativeProperty()
             {
                 double a = 3, b = 5;
-                Assert.Equal(Calculator.Add(a, b), Calculator.Add(b, a));
+
+                var actual = Calculator.Add(a, b);
+                var expected = Calculator.Add(b, a);
+
+                Assert.Equal(actual,expected);
             }
         }
 
         public class SubtractTests
         {
             [Fact]
-            public void TestPositiveIntegers()
+            public void TestSubtractingPositiveIntegers()
             {
-                Assert.Equal(1, Calculator.Subtract(3, 2));
+                var actual = 1;
+                var expected = Calculator.Subtract(3, 2);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestNegativeIntegers()
+            public void TestSubtractingNegativeIntegers()
             {
-                Assert.Equal(-5, Calculator.Subtract(-2, 3));
+                var actual = -5;
+                var expected = Calculator.Subtract(-1, 4);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestZero()
+            public void TestSubtractingZeroFromPositiveInteger()
             {
-                Assert.Equal(5, Calculator.Subtract(5, 0));
+                var actual = 5;
+                var expected = Calculator.Subtract(5,0);
+
+                // Assert
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestFloatingPointNumbers()
+            public void TestSubtractingFloatingPointNumbers()
             {
-                Assert.Equal(1.5, Calculator.Subtract(3.5, 2));
+                var actual = 1.5;
+                var expected = Calculator.Subtract(3.5, 2);
+
+                // Assert
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
             public void TestXLessThanY()
             {
-                Assert.Equal(-2, Calculator.Subtract(2, 4));
+                var actual = -2;
+                var expected = Calculator.Subtract(2, 4);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
             public void TestYLessThanX()
             {
-                Assert.Equal(2, Calculator.Subtract(4, 2));
+                var actual = 2;
+                var expected = Calculator.Subtract(4, 2);
+
+                Assert.Equal(actual,expected);
             }
         }
 
         public class MultiplyTests
         {
             [Fact]
-            public void TestPositiveIntegers()
+            public void TestMultiplyingPositiveIntegers()
             {
-                Assert.Equal(6, Calculator.Multiply(2, 3));
+                var actual = 6;
+                var expected = Calculator.Multiply(2, 3);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestNegativeIntegers()
+            public void TestMultiplyingNegativeIntegers()
             {
-                Assert.Equal(-6, Calculator.Multiply(-2, 3));
+                var actual = -6;
+                var expected = Calculator.Multiply(-2, 3);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestZero()
+            public void TestMultiplyingAnIntegerWithZero()
             {
-                Assert.Equal(0, Calculator.Multiply(5, 0));
+                var actual = 0;
+                var expected = Calculator.Multiply(5, 0);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestFloatingPointNumbers()
+            public void TestMultiplyingFloatingPointNumbers()
             {
-                Assert.Equal(6.75, Calculator.Multiply(2.25, 3));
+                var actual = 6.75;
+                var expected = Calculator.Multiply(2.25, 3);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
             public void TestCommutativeProperty()
             {
                 double a = 3, b = 5;
-                Assert.Equal(Calculator.Multiply(a, b), Calculator.Multiply(b, a));
+
+                var actual = Calculator.Multiply(a, b);
+                var expected = Calculator.Multiply(b, a);
+
+                Assert.Equal(actual, expected);
             }
         }
 
         public class DivideTests
         {
             [Fact]
-            public void TestPositiveIntegers()
+            public void TestDividingPositiveIntegers()
             {
-                Assert.Equal(2, Calculator.Divide(6, 3));
+                var actual = 2;
+                var expected = Calculator.Divide(6, 3);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestNegativeIntegers()
+            public void TestDividingNegativeIntegers()
             {
-                Assert.Equal(-2, Calculator.Divide(-6, 3));
+                var actual = -2;
+                var expected = Calculator.Divide(-6, 3);
+
+                Assert.Equal(actual,expected);
             }
 
             [Fact]
-            public void TestZeroDividend()
-            {
+            public void TestZeroDividendThrowingError()
+            {              
                 Assert.Throws<DivideByZeroException>(() => Calculator.Divide(5, 0));
             }
 
             [Fact]
             public void TestZeroDivisor()
             {
-                Assert.Equal(0, Calculator.Divide(0, 5));
+                var actual = 0;
+                var expected = Calculator.Divide(0, 5);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestFloatingPointNumbers()
+            public void TestDividingFloatingPointNumbers()
             {
-                Assert.Equal(2.5, Calculator.Divide(5, 2));
+                var actual = 2.5;
+                var expect4ed = Calculator.Divide(5, 2);
+
+                Assert.Equal(actual, expect4ed);
             }
         }
 
         public class SquareRootTests
         {
             [Fact]
-            public void TestPositiveNumber()
+            public void TestSquareRootingPositiveNumber()
             {
-                Assert.Equal(2, Calculator.SquareRoot(4));
+                var actual = 2;
+                var expected = Calculator.SquareRoot(4);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestZero()
+            public void TestSquareRootingZero()
             {
-                Assert.Equal(0, Calculator.SquareRoot(0));
+
+                var actual = 0;
+                var expected = Calculator.SquareRoot(0);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestNegativeNumber()
-            {
+            public void TestSquareRootingNegativeNumberThrowingError()
+            {                
                 Assert.Throws<ArgumentException>(() => Calculator.SquareRoot(-4));
             }
         }
@@ -169,30 +240,40 @@ namespace UnitTestingHomework
         public class PowerTests
         {
             [Fact]
-            public void TestPositiveIntegers()
+            public void TestPoweringPositiveIntegers()
             {
-                Assert.Equal(8, Calculator.Power(2, 3));
+                var actual = 8;
+                var expected = Calculator.Power(2, 3);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestNegativeIntegers()
+            public void TestPoweringNegativeIntegers()
             {
-                Assert.Equal(-8, Calculator.Power(-2, 3));
+                var actual = -8;
+                var expected = Calculator.Power(-2, 3);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestZeroExponent()
+            public void TestPoweringZeroExponent()
             {
-                Assert.Equal(1, Calculator.Power(5, 0));
+                var actual = 1;
+                var expected = Calculator.Power(5, 0);
+
+                Assert.Equal(actual, expected);
             }
 
             [Fact]
-            public void TestFloatingPointNumbers()
+            public void TestPoweringFloatingPointNumbers()
             {
-                Assert.Equal(27.0, Calculator.Power(3.0, 3.0));
+                var actual = 27.0;
+                var expected = Calculator.Power(3.0, 3.0);
+
+                Assert.Equal(actual, expected);
             }
         }
-
-
     }
 }
