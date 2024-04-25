@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexUnitTestingHomeworkW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessorApp", "ImageProcessorApp\ImageProcessorApp.csproj", "{719D1FD6-DBBC-4A8B-A385-8846355B0094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week04", "Week04\Week04.csproj", "{24A46DA1-37BC-4EA3-A1E3-72DC4F4D9CAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week04", "Week04\Week04.csproj", "{24A46DA1-37BC-4EA3-A1E3-72DC4F4D9CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05", "Week05\Week05.csproj", "{B508B166-2321-4082-B8F4-991143FEAE94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{24A46DA1-37BC-4EA3-A1E3-72DC4F4D9CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24A46DA1-37BC-4EA3-A1E3-72DC4F4D9CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24A46DA1-37BC-4EA3-A1E3-72DC4F4D9CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B508B166-2321-4082-B8F4-991143FEAE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B508B166-2321-4082-B8F4-991143FEAE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B508B166-2321-4082-B8F4-991143FEAE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B508B166-2321-4082-B8F4-991143FEAE94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
